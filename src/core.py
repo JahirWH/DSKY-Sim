@@ -8,11 +8,17 @@ class DSKYCore:
     
     def __init__(self):
         # Diccionario de comandos VERB-NOUN
-        self.comandos = {
-            ('06', '20'): "Mostrando velocidad (X, Y, Z)...",
-            ('16', '36'): "Mostrando orientación (pitch, roll, yaw)...",
-            ('37', '63'): "Iniciando programa automático de navegación...",
-        }
+       self.comandos = {
+        ('06', '20'): " Mostrando velocidad (X, Y, Z)...",
+        ('16', '36'): " Mostrando orientación (pitch, roll, yaw)...",
+        ('37', '63'): " Iniciando programa automático de navegación...",
+        ('06', '17'): " Altitud sobre superficie lunar: 3200m",
+        ('27', '10'): " Navegación estelar activada. Localizando estrellas guía...",
+        ('41', '18'): " Iniciando secuencia de descenso lunar...",
+        ('91', '01'): " Iniciando música de la Tierra... [Fly me to the Moon]",
+        ('54', '77'): " Transmitiendo mensaje: 'Houston, todo bajo control.'",
+    }
+
     
     def ejecutar_comando(self, verb: str, noun: str) -> str:
         """
